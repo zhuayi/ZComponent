@@ -1,0 +1,14 @@
+PODS:
+  - ZComponent (0.1.0)
+
+DEPENDENCIES:
+  - ZComponent (from `../`)
+
+EXTERNAL SOURCES:
+  ZComponent:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ZComponent: ae9263902c46d68c8dfcf0d3ecb52927acb9aa7e
+
+COCOAPODS: 0.37.2

@@ -1,0 +1,6 @@
+framework module ZComponent {
+  umbrella header "Pods-ZComponent_Example-ZComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}

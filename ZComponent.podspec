@@ -9,32 +9,55 @@
 Pod::Spec.new do |s|
   s.name             = "ZComponent"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ZComponent."
+  s.summary          = "ZComponent是一个工具库, 封装好了定义的宏,ViewController基类,和view 扩展"
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
+
   s.description      = <<-DESC
+                        ZComponent是一个工具库, 封装好了定义的宏,ViewController基类,和view 扩展, 使用该库可以减少开发前期的准备.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/ZComponent"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/zhuayi/ZComponent"
   s.license          = 'MIT'
   s.author           = { "zhuayi" => "2179942@qq.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/ZComponent.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/zhuayi/ZComponent.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'ZComponent' => ['Pod/Assets/*.png']
-  }
+#  s.source_files = 'Pod/Classes/**/*'
+#  s.resource_bundles = {
+#    'ZComponent' => ['Pod/Assets/*.png']
+#  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+#################################### ZMacro #####################################################
+
+s.subspec 'ZMacro' do | zmacro |
+zmacro.source_files = 'Pod/Classes/ZMacro/**/*'
+zmacro.public_header_files = 'Pod/Classes/ZMacro/**/*.h'
+end
+
+################################################################################################
+
+
+#################################### Category ##################################################
+
+s.subspec 'Category' do | category |
+category.source_files = 'Pod/Classes/Category/**/*'
+category.public_header_files = 'Pod/Classes/Category/**/*.h'
+end
+
+################################################################################################
+
+
+#################################### ZBaseViewController ##################################################
+
+s.subspec 'ZBaseViewController' do | zbaseViewController |
+zbaseViewController.source_files = 'Pod/Classes/ZBaseViewController/**/*'
+zbaseViewController.public_header_files = 'Pod/Classes/ZBaseViewController/**/*.h'
+zbaseViewController.dependency 'ZComponent/ZMacro'
+end
+
+################################################################################################
+
+
 end
