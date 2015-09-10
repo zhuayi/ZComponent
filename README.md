@@ -20,6 +20,12 @@ it, simply add the following line to your Podfile:
 pod "ZComponent"
 ```
 
+**or**
+
+```ruby
+pod 'ZComponent', :subspecs => ['ZBaseViewController', 'ZMacro', ...]
+```
+
 ## Author
 
 zhuayi, 2179942@qq.com
