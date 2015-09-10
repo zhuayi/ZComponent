@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'ZComponent_Example', :exclusive => true do
+  pod "ZComponent", :path => "../"
+end
+
+target 'ZComponent_Tests', :exclusive => true do
+  pod "ZComponent", :path => "../"
+
+  
+end
