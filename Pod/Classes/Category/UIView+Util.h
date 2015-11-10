@@ -80,4 +80,12 @@
 // 返回当前点相对于window的坐标
 - (CGPoint)originPointInWindow;
 - (CGPoint)maxPointInWindow;
+
+/**
+ *  设置 view 居中显示
+ *
+ *  @param superview 父视图
+ */
+- (void)setAlignmentCenterWithSuperview:(UIView *)superview;
+
 @end

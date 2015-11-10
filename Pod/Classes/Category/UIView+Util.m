@@ -452,6 +452,17 @@
     self.frame = frame;
 }
 
+/**
+ *  设置 view 居中显示
+ *
+ *  @param superview 父视图
+ */
+- (void)setAlignmentCenterWithSuperview:(UIView *)superview {
+    
+    self.left = (superview.width - self.width ) / 2;
+    
+}
+
 //animation
 
 - (void)crossfadeWithDuration:(NSTimeInterval)duration
