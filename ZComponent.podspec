@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ZComponent"
-  s.version          = "0.2.0"
+  s.version          = "0.3.0"
   s.summary          = "ZComponent是一个工具库, 封装好了定义的宏,ViewController基类,和view 扩展"
 
 

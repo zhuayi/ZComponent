@@ -13,4 +13,6 @@
 
 @property (nonatomic, assign) BOOL selected;
 
+@property (nonatomic, strong) UIButton *button;
+
 @end
