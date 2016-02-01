@@ -516,6 +516,7 @@
 				GCC_PREFIX_HEADER = "ZComponent/ZComponent-Prefix.pch";
 				INFOPLIST_FILE = "ZComponent/ZComponent-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = mh_dylib;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -533,6 +534,7 @@
 				GCC_PREFIX_HEADER = "ZComponent/ZComponent-Prefix.pch";
 				INFOPLIST_FILE = "ZComponent/ZComponent-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = mh_dylib;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
