@@ -10,20 +10,19 @@
 
 @implementation ZBaseViewController
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
+    
     if (self) {
-        
         /**
          *  设置 YES, 不监听网络状态
          */
-        if (!self.isNotMontorNetWork)
-        {
+        if (!self.isNotMontorNetWork) {
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkUnavailable) name:@"netWorkUnavailable" object:nil];
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkAvailable) name:@"netWorkAvailable" object:nil];
         }
     }
+    
     return self;
 }
 
@@ -40,20 +39,17 @@
         self.modalPresentationCapturesStatusBarAppearance = NO;
     }
     
-    if(IOS8) {
-        
+    if (IOS8) {
         // IOS8多了一个样式UIModalPresentationOverCurrentContext，
         // IOS8中presentViewController时请将控制器的modalPresentationStyle设置为UIModalPresentationOverCurrentContext
         // 否则会出现
         // Snapshotting a view that has not been rendered results in an empty snapshot. Ensure your view has been rendered at least once before snapshotting or snapshot after screen updates.
-        self.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+        self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     }
     
     if (self.navigationController.viewControllers.count > 1) {
-        
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] init];
     }
-    
 }
 
 /**
@@ -67,6 +63,7 @@
         self.navigationItem.leftBarButtonItem = leftBarButton;
         _leftButton = leftBarButton;
     }
+    
     return _leftButton;
 }
 
@@ -82,46 +79,17 @@
         
         _rightButton = leftBarButton;
     }
+    
     return _rightButton;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.interactivePopGestureRecognizer.delegate = self;
-}
-
-- (void)viewWillDisappear: (BOOL)animated {
-    [super viewWillDisappear: animated];
-    if (![[self.navigationController viewControllers] containsObject: self]) {
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if (![[self.navigationController viewControllers] containsObject:self]) {
         // the view has been removed from the navigation stack, back is probably the cause
         // this will be slow with a large stack however.
     }
-}
-
-// 是否是root控制器
-- (BOOL)isRootViewController {
-    return (self == self.navigationController.viewControllers.firstObject);
-}
-
-#pragma mark
-#pragma mark UIGestureRecognizerDelegate
-
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    if ([self isRootViewController]) {
-        return NO;
-    } else {
-        return YES;
-    }
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
-{
-    return YES;
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
-{
-    return [gestureRecognizer isKindOfClass:UIScreenEdgePanGestureRecognizer.class];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -135,18 +103,18 @@
 }
 
 - (void)rightButtonAction {
-    
 }
 
 - (void)netWorkUnavailable {
     //NSLog(@"网络不可用");
 }
 
-- (void) netWorkAvailable {
+- (void)netWorkAvailable {
     //    NSLog(@"netWorkAvailable");
 }
 
 - (void)dealloc {
     //NSLog(@"dealloc :%@",[self class]);
 }
+
 @end
