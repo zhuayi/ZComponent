@@ -16,8 +16,15 @@
 
 - (void)viewDidLoad
 {
+//    
+//    self.isNavigationTransparent = YES;
+//    self.isCustomNavigation = YES;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, AutoSize(202))];
+//    headerView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:headerView];
 }
 
 - (void)didReceiveMemoryWarning

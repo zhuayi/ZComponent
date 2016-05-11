@@ -51,4 +51,31 @@
 // 网络可用时
 - (void) netWorkAvailable;
 
+
+
+#pragma mark 自定义导航栏
+
+/**
+ *  返回图片
+ */
+@property (nonatomic, strong) UIImage *backImage;
+
+/**
+ *  自定义导航栏
+ */
+@property (nonatomic, strong) UINavigationBar *navigationBar;
+
+@property (nonatomic, strong) UINavigationItem *navigationBarItem;
+
+/**
+ *  是否使用自定义导航栏
+ */
+@property (nonatomic, assign) BOOL isCustomNavigation;
+
+/**
+ *  是否透明
+ */
+@property (nonatomic, assign) BOOL isNavigationTransparent;
+
+
 @end

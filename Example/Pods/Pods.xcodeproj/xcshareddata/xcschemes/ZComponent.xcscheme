@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A82CC8C88C2EE4F1C133F63"
+               BlueprintIdentifier = "CE8C988627054FE83544F4F8C660196D"
                BuildableName = "ZComponent.framework"
-               BlueprintName = "Pods-ZComponent_Tests-ZComponent"
+               BlueprintName = "ZComponent"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A82CC8C88C2EE4F1C133F63"
+            BlueprintIdentifier = "CE8C988627054FE83544F4F8C660196D"
             BuildableName = "ZComponent.framework"
-            BlueprintName = "Pods-ZComponent_Tests-ZComponent"
+            BlueprintName = "ZComponent"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

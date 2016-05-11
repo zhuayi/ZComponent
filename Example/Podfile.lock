@@ -1,5 +1,12 @@
 PODS:
-  - ZComponent (0.1.0)
+  - ZComponent (0.4.0):
+    - ZComponent/Category (= 0.4.0)
+    - ZComponent/ZBaseViewController (= 0.4.0)
+    - ZComponent/ZMacro (= 0.4.0)
+  - ZComponent/Category (0.4.0)
+  - ZComponent/ZBaseViewController (0.4.0):
+    - ZComponent/ZMacro
+  - ZComponent/ZMacro (0.4.0)
 
 DEPENDENCIES:
   - ZComponent (from `../`)
@@ -9,6 +16,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ZComponent: ae9263902c46d68c8dfcf0d3ecb52927acb9aa7e
+  ZComponent: 286d7d1e2117313e89e9f90c7430ca0410555540
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0
