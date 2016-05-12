@@ -193,7 +193,7 @@
     
     if (_navigationBar == nil) {
         
-        _navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, NavigationBar_HEIGHT)];
+        _navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, topView_origin_y, SCREEN_WIDTH, NavigationBar_HEIGHT)];
         _navigationBar.titleTextAttributes = self.navigationController.navigationBar.titleTextAttributes;
     }
     return _navigationBar;
