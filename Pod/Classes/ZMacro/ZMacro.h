@@ -89,8 +89,8 @@
 #define FONT(F) [UIFont fontWithName:@"FZHTJW--GB1-0" size:F]
 
 //根据不同的设备，定义不同的大小
-#define AutoSizeScale (iPhone6PlusScale ? (1.17) : iPhone6Plus ? (1.29375) : (iPhone6 ? (1.17) : 1))
-#define AutoSize(size) AutoSizeScale*size
+#define AutoSizeScale ([UIScreen mainScreen].bounds.size.width / 640)
+#define AutoSize(size) AutoSizeScale*DeviceScale
 
 //当前是否是wifi
 #define is_wifi (([Reachability reachabilityWithHostname:@"www.baidu.com"]).currentReachabilityStatus == ReachableViaWiFi ? YES:NO)
