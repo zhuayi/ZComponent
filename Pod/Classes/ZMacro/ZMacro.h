@@ -89,8 +89,10 @@
 #define FONT(F) [UIFont fontWithName:@"FZHTJW--GB1-0" size:F]
 
 //根据不同的设备，定义不同的大小
-#define AutoSizeScale ((SCREEN_WIDTH > 750)? ( (SCREEN_WIDTH / 3) / (640 / 2)) : (SCREEN_WIDTH / 640))
-#define AutoSize(size) AutoSizeScale*DeviceScale
+
+#define DEVICESCALE ((IOS8)?[[UIScreen mainScreen] scale]:((SCREEN_WIDTH > 375) ? 3 : 2))
+#define AutoSizeScale ((SCREEN_WIDTH) / 320)
+#define AutoSize(size) (size * AutoSizeScale)
 
 //当前是否是wifi
 #define is_wifi (([Reachability reachabilityWithHostname:@"www.baidu.com"]).currentReachabilityStatus == ReachableViaWiFi ? YES:NO)
