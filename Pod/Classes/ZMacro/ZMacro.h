@@ -89,7 +89,7 @@
 #define FONT(F) [UIFont fontWithName:@"FZHTJW--GB1-0" size:F]
 
 //根据不同的设备，定义不同的大小
-#define AutoSizeScale ([UIScreen mainScreen].bounds.size.width / 640)
+#define AutoSizeScale ((SCREEN_WIDTH > 750)? ( (SCREEN_WIDTH / 3) / (640 / 2)) : (SCREEN_WIDTH / 640))
 #define AutoSize(size) AutoSizeScale*DeviceScale
 
 //当前是否是wifi
